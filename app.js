@@ -4,7 +4,6 @@ var path = require('path');
 var app = express();
 var engine = require('ejs-locals');
 var bodyParser = require('body-parser');
-var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var mapRoute, extrasRoute;
 
@@ -15,8 +14,6 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true }));
 app.use(bodyParser.json());
 app.use( express.static( path.join( __dirname, 'public' )));
-
-app.use(cookieParser());
 
 initRoutes('routes', function() {
 	app.get('/', mapRoute.map);

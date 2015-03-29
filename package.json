@@ -15,7 +15,6 @@
   "private": true,
   "dependencies": {
     "body-parser": "*",
-    "cookie-parser": "*",
     "ejs": "*",
     "ejs-locals": "*",
     "express": "4.x",

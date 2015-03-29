@@ -18,7 +18,22 @@
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiYW1zdG9uZTMyNiIsImEiOiJmWVRIem1VIn0.RjPpuvyFwOqDS9l5S8u7gw';
-var map = L.mapbox.map('map', 'amstone326.l62i5b97');
+var map = L.mapbox.map('map', null).setView([22.76, -25.84], 3);
+
+var layers = {
+	RateContinous1A: L.mapbox.tileLayer('amstone326.lj6gf366'),
+	Outdoors: L.mapbox.tileLayer('examples.ik7djhcc'),
+	Satellite: L.mapbox.tileLayer('examples.map-igb471ik')
+};
+
+//Add gridLayers and gridControls
+RateContinous1A_gridlayer = L.mapbox.gridLayer('amstone326.lj6gf366').addTo(map);
+L.mapbox.gridControl(RateContinous1A_gridlayer).addTo(map);
+
+//Add layer toggler
+layers.RateContinous1A.addTo(map);
+L.control.layers(layers).addTo(map);
+
 </script>
 
 
