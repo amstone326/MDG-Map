@@ -24,5 +24,5 @@ exports.status = function(req, res) {
 };
 
 exports.mapExplanation = function(req, res) {
-	res.render('map_explanation', {title:"How the Map Works"});
+	res.render('map_explanation', {title:"How it Works"});
 };
