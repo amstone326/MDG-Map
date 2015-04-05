@@ -3,11 +3,13 @@
  */
 
 exports.init = function(callback) {
-	console.log("MAP ROUTE INITALIZED");
 	callback();
 };
 
-exports.map = function(req, res) {
-	console.log("MAP ROUTE CALLED");
-	res.render('map3', {title:"Map"});
+exports.rate1A = function(req, res) {
+	res.render('1A_rate', {title:"Map"});
+};
+
+exports.rate1B = function(req, res) {
+	res.render('1B_rate', {title:"Map"});
 };

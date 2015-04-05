@@ -16,8 +16,9 @@ app.use(bodyParser.json());
 app.use( express.static( path.join( __dirname, 'public' )));
 
 initRoutes('routes', function() {
-	app.get('/', mapRoute.map);
-	app.get('/map', mapRoute.map);
+	app.get('/', mapRoute.rate1A);
+	app.get('/rate1A', mapRoute.rate1A);
+	app.get('/rate1B', mapRoute.rate1B);
 	app.get('/info', extrasRoute.info);
 	http.createServer(app).listen(app.get('port'), function() {
 			 console.log( 'Open browser to http://localhost:' + app.get( 'port' ));
