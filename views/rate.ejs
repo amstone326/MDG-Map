@@ -45,9 +45,9 @@
 
 <div id='map'>
 <nav id='target_selector'>
-	<a href="/rate1A">Target 1A</a>
+	<a href="/rate/1A/amstone326.jdkro1or/amstone326.jdkro1or">Target 1A</a>
 	<a> | </a>
-	<a href="/rate1B">Target 1B</a>
+	<a href="/rate/1B/amstone326.owsl9pb9/amstone326.owsl9pb9"}">Target 1B</a>
 	<a> | </a> 
 	<a href="/rate1C">Target 1C</a>
 	<a> | </a> 
@@ -69,15 +69,23 @@
 	<input type="radio" name="layer" value="rate" checked="checked">Rate of Progress Layer<br>
 	<input type="radio" name="layer" value="status">Status on Goal Layer
 </form>
+<div id='mapIdHolder' hidden=true><%= mapId %></div>
+<div id='statusMapIdHolder' hidden=true><%= statusMapId %></div>
+<div id='targetNumHolder' hidden=true><%= targetNum %></div>
 </div>
 
 <script>
+
+var mapId = $('#mapIdHolder').text();
+var statusMapId =  $('#statusMapIdHolder').text();
+var targetNum = $('#targetNumHolder').text() ;
+
 L.mapbox.accessToken = 'pk.eyJ1IjoiYW1zdG9uZTMyNiIsImEiOiJmWVRIem1VIn0.RjPpuvyFwOqDS9l5S8u7gw';
-var map = L.mapbox.map('map', 'amstone326.jdkro1or').setView([22.76, 40], 2);
+var map = L.mapbox.map('map', mapId).setView([22.76, 40], 2);
 
 $(function(){
-	$('input[type="radio"]').click(function(){
-		window.location.replace('/status1A');
+	$('input[type="radio"]').click(function() {
+		window.location.replace('/status/' + targetNum + "/" + statusMapId + "/" + mapId);
 	});
 });
 

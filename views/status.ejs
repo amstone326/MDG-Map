@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>MDG Map</title>
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<style>
+		body { margin:0; padding:0; }
+		#map { 
+			position:absolute; 
+			top:0; 
+			bottom:0; 
+			width:100%; }
+		
+		#target_selector {
+		  font-size:15px;
+		  font-weight:1100;
+		  position:absolute;
+		  top:10px;left:230px;
+		  z-index:1;
+		  border-radius:3px;
+		  border:1px solid rgba(0.4,0,0,0.4);
+  		}
+  		
+  		form {
+  	      background-color:#000;
+  	      color:white;
+		  font-size:13px;
+		  position:absolute;
+		  top:35px;left:500px;
+		  z-index:1;
+		  border-radius:5px;
+		  border-style:solid;
+		  border-width:5px;
+		  border-color:black;
+  		}
+		
+		
+	</style>
+</head>
+<body>
+
+<div id='map'>
+<nav id='target_selector'>
+	<a href="/status/1A/amstone326.jdkro1or/amstone326.jdkro1or">Target 1A</a>
+	<a> | </a>
+	<a href="/status/1B/amstone326.owsl9pb9/amstone326.owsl9pb9"}">Target 1B</a>
+	<a> | </a> 
+	<a href="/status/1C/">Target 1C</a>
+	<a> | </a> 
+	<a href="/status/2A/">Target 2A</a> 
+	<a> | </a>
+	<a href="/status/3A/">Target 3A</a>
+	<a> | </a>
+	<a href="/status/4A/">Target 4A</a>
+	<a> | </a>
+	<a href="/status/5A/">Target 5A</a>
+	<a> | </a>
+	<a href="/status/5B/">Target 5B</a> 
+	<a> | </a>
+	<a href="/status/6A/">Target 6A</a>
+	<a> | </a>
+	<a href="/status/6B/">Target 6B</a>  
+</nav>
+<form id='layer_selector'>
+	<input type="radio" name="layer" value="rate">Rate of Progress Layer<br>
+	<input type="radio" name="layer" value="status" checked="checked">Status on Goal Layer
+</form>
+<div id='mapIdHolder' hidden=true><%= mapId %></div>
+<div id='rateMapIdHolder' hidden=true><%= rateMapId %></div>
+<div id='targetNumHolder' hidden=true><%= targetNum %></div>
+</div>
+
+<script>
+
+var mapId = $('#mapIdHolder').text();
+var rateMapId =  $('#rateMapIdHolder').text();
+var targetNum = $('#targetNumHolder').text() ;
+
+L.mapbox.accessToken = 'pk.eyJ1IjoiYW1zdG9uZTMyNiIsImEiOiJmWVRIem1VIn0.RjPpuvyFwOqDS9l5S8u7gw';
+var map = L.mapbox.map('map', mapId).setView([22.76, 40], 2);
+
+$(function(){
+	$('input[type="radio"]').click(function() {
+		window.location.replace('/rate/' + targetNum + "/" + rateMapId + "/" + mapId);
+	});
+});
+
+
+</script>
+
+
+</body>
+</html>
