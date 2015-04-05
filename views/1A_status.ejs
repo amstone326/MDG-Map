@@ -45,39 +45,39 @@
 
 <div id='map'>
 <nav id='target_selector'>
-	<a href="/rate1A">Target 1A</a>
+	<a href="/status1A">Target 1A</a>
 	<a> | </a>
-	<a href="/rate1B">Target 1B</a>
+	<a href="/status1B">Target 1B</a>
 	<a> | </a> 
-	<a href="/rate1C">Target 1C</a>
+	<a href="/status1C">Target 1C</a>
 	<a> | </a> 
-	<a href="/rate2A">Target 2A</a> 
+	<a href="/status2A">Target 2A</a> 
 	<a> | </a>
-	<a href="/rate3A">Target 3A</a>
+	<a href="/status3A">Target 3A</a>
 	<a> | </a>
-	<a href="/rate4A">Target 4A</a>
+	<a href="/status4A">Target 4A</a>
 	<a> | </a>
-	<a href="/rate5A">Target 5A</a>
+	<a href="/status5A">Target 5A</a>
 	<a> | </a>
-	<a href="/rate5B">Target 5B</a> 
+	<a href="/status5B">Target 5B</a> 
 	<a> | </a>
-	<a href="/rate6A">Target 6A</a>
+	<a href="/status6A">Target 6A</a>
 	<a> | </a>
-	<a href="/rate6B">Target 6B</a>  
+	<a href="/status6B">Target 6B</a>  
 </nav>
 <form id='layer_selector'>
-	<input type="radio" name="layer" value="rate" checked="checked">Rate of Progress Layer<br>
-	<input type="radio" name="layer" value="status">Status on Goal Layer
+	<input type="radio" name="layer" value="rate">Rate of Progress Layer<br>
+	<input type="radio" name="layer" value="status" checked="checked">Status on Goal Layer
 </form>
 </div>
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiYW1zdG9uZTMyNiIsImEiOiJmWVRIem1VIn0.RjPpuvyFwOqDS9l5S8u7gw';
-var map = L.mapbox.map('map', 'amstone326.owsl9pb9').setView([22.76, 40], 2);
+var map = L.mapbox.map('map', 'amstone326.jdkro1or').setView([22.76, 40], 2);
 
 $(function(){
 	$('input[type="radio"]').click(function(){
-		window.location.replace('/status1B');
+		window.location.replace('/rate1A');
 	});
 });
 
