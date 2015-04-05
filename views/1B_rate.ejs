@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>MDG Map</title>
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
+	<style>
+		body { margin:0; padding:0; }
+		#map { 
+			position:absolute; 
+			top:0; 
+			bottom:0; 
+			width:100%; }
+		
+		#navbar {
+		  font-size:15px;
+		  font-weight:1100;
+		  position:absolute;
+		  top:10px;left:230px;
+		  z-index:1;
+		  border-radius:3px;
+		  border:1px solid rgba(0.4,0,0,0.4);
+  		}
+		
+		
+	</style>
+</head>
+<body>
+
+<div id='map'>
+<nav id='navbar'>
+	<a href="#">Target 1A</a>
+	<a> | </a>
+	<a href="#">Target 1B</a>
+	<a> | </a> 
+	<a href="#">Target 1C</a>
+	<a> | </a> 
+	<a href="#">Target 2A</a> 
+	<a> | </a>
+	<a href="#">Target 3A</a>
+	<a> | </a>
+	<a href="#">Target 4A</a>
+	<a> | </a>
+	<a href="#">Target 5A</a>
+	<a> | </a>
+	<a href="#">Target 5B</a> 
+	<a> | </a>
+	<a href="#">Target 6A</a>
+	<a> | </a>
+	<a href="#">Target 6B</a>  
+</nav>
+</div>
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoiYW1zdG9uZTMyNiIsImEiOiJmWVRIem1VIn0.RjPpuvyFwOqDS9l5S8u7gw';
+var map = L.mapbox.map('map', 'amstone326.f92akyb9').setView([22.76, -25.84], 3);
+
+</script>
+
+
+</body>
+</html>

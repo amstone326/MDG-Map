@@ -21,18 +21,47 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiYW1zdG9uZTMyNiIsImEiOiJmWVRIem1VIn0.RjPpuvyFw
 var map = L.mapbox.map('map', null).setView([22.76, -25.84], 3);
 
 var layers = {
-	RateContinous1A: L.mapbox.tileLayer('amstone326.lj6gf366'),
-	Outdoors: L.mapbox.tileLayer('examples.ik7djhcc'),
-	Satellite: L.mapbox.tileLayer('examples.map-igb471ik')
+	ProgressRate1A: L.mapbox.tileLayer('amstone326.yrl1h5mi'),
+	ProgressRate1B: L.mapbox.tileLayer('amstone326.f92akyb9')
 };
 
-//Add gridLayers and gridControls
-RateContinous1A_gridlayer = L.mapbox.gridLayer('amstone326.lj6gf366').addTo(map);
-L.mapbox.gridControl(RateContinous1A_gridlayer).addTo(map);
+//Create gridLayers and gridControls
+var gridLayers = {};
+var gridControls = {};
+
+Rate1A_gridLayer = L.mapbox.gridLayer('amstone326.yrl1h5mi');
+Rate1A_gridControl = L.mapbox.gridControl(Rate1A_gridLayer);
+Rate1B_gridLayer = L.mapbox.gridLayer('amstone326.f92akyb9');
+Rate1B_gridControl = L.mapbox.gridControl(Rate1B_gridLayer);
+
+gridLayers['ProgressRate1A'] = Rate1A_gridLayer;
+gridLayers['ProgressRate1B'] = Rate1B_gridLayer;
+gridControls['ProgressRate1A'] = Rate1A_gridControl;
+gridControls['ProgressRate1B'] = Rate1B_gridControl;
 
 //Add layer toggler
-layers.RateContinous1A.addTo(map);
+layers.ProgressRate1A.addTo(map);
 L.control.layers(layers).addTo(map);
+
+currentGridLayer = null;
+currentGridControl = null;
+
+//Event listener for when layer is changed
+map.on('baselayerchange', function(e) {
+	console.log('LAYER CHANGED');
+	var layerName = e.name;
+	console.log(layerName);
+	if (currentGridLayer != null) {
+		currentGridLayer.remove(map);
+		currentGridControl.remove(map);
+	}
+	gridLayer = gridLayers[layerName];
+	gridLayer.addTo(map);
+	gridControl = gridControls[layerName];
+	gridControl.addTo(map);
+	currentGridLayer = gridLayer;
+	currentGridControl = gridControl;
+});
 
 </script>
 

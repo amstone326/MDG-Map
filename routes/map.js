@@ -9,5 +9,5 @@ exports.init = function(callback) {
 
 exports.map = function(req, res) {
 	console.log("MAP ROUTE CALLED");
-	res.render('map', {title:"Map"});
+	res.render('map3', {title:"Map"});
 };
