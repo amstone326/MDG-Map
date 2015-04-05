@@ -69,18 +69,18 @@
 	<input type="radio" name="layer" value="rate" checked="checked">Rate of Progress Layer<br>
 	<input type="radio" name="layer" value="status">Status on Goal Layer
 </form>
-<div id='mapIdHolder' hidden=true><%= mapId %></div>
 </div>
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiYW1zdG9uZTMyNiIsImEiOiJmWVRIem1VIn0.RjPpuvyFwOqDS9l5S8u7gw';
-var map = L.mapbox.map('map', $('#mapIdHolder').text().trim()).setView([22.76, 40], 2);
+var map = L.mapbox.map('map', 'amstone326.vcej0pb9').setView([22.76, 40], 2);
 
 $(function(){
 	$('input[type="radio"]').click(function(){
-		window.location.replace('/status1C');
+		window.location.replace('/status4A');
 	});
 });
+
 
 </script>
 
