@@ -7,6 +7,8 @@
 	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
 	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 	<style>
 		body { margin:0; padding:0; }
 		#map { 
@@ -24,6 +26,14 @@
 		  border-radius:3px;
 		  border:1px solid rgba(0.4,0,0,0.4);
   		}
+  		
+  		#back-button {
+  			position:absolute;
+		  	bottom:40px;left:12px;
+		  	text-color:black;
+		  	border-radius:7px;
+		  	z-index:1;
+		}
   		
   		form {
   	      background-color:#000;
@@ -45,33 +55,37 @@
 
 <div id='map'>
 <nav id='target_selector'>
-	<a href="/status/1A/amstone326.jdkro1or/amstone326.jdkro1or">Target 1A</a>
+	<a href="/status/1A/amstone326.7atc5wmi/amstone326.2ca6ecdi">Target 1A</a>
 	<a> | </a>
-	<a href="/status/1B/amstone326.owsl9pb9/amstone326.owsl9pb9"}">Target 1B</a>
+	<a href="/status/1B/amstone326.lt4eu3di/amstone326.wdx11yvi">Target 1B</a>
 	<a> | </a> 
-	<a href="/status/1C/">Target 1C</a>
+	<a href="/status/1C/amstone326.b1wf80k9/amstone326.4xre8kt9">Target 1C</a>
 	<a> | </a> 
-	<a href="/status/2A/">Target 2A</a> 
+	<a href="/status/2A/amstone326.46fj38fr/amstone326.0pfirudi">Target 2A</a> 
 	<a> | </a>
-	<a href="/status/3A/">Target 3A</a>
+	<a href="/status/3A/amstone326.1nkzw7b9/amstone326.p9orbe29">Target 3A</a>
 	<a> | </a>
-	<a href="/status/4A/">Target 4A</a>
+	<a href="/status/4A/amstone326.hdjz6w29/amstone326.1j198uxr">Target 4A</a>
 	<a> | </a>
-	<a href="/status/5A/">Target 5A</a>
+	<a href="/status/5A/amstone326.311hsemi/amstone326.ol1pp66r">Target 5A</a>
 	<a> | </a>
-	<a href="/status/5B/">Target 5B</a> 
+	<a href="/status/5B/amstone326.7i0h33di/amstone326.spu5l8fr">Target 5B</a> 
 	<a> | </a>
-	<a href="/status/6A/">Target 6A</a>
+	<a href="/status/6A/amstone326.9qjdzpvi/amstone326.kaitfbt9">Target 6A</a>
 	<a> | </a>
-	<a href="/status/6B/">Target 6B</a>  
+	<a href="/status/6B/amstone326.ixfuhaor/amstone326.e8vholxr">Target 6B</a>  
 </nav>
 <form id='layer_selector'>
-	<input type="radio" name="layer" value="rate">Rate of Progress Layer<br>
-	<input type="radio" name="layer" value="status" checked="checked">Status on Goal Layer
+	<input type="radio" name="layer" value="rate"> Rate of Progress Layer<br>
+	<input type="radio" name="layer" value="status" checked="checked"> Status on Goal Layer
 </form>
 <div id='mapIdHolder' hidden=true><%= mapId %></div>
 <div id='rateMapIdHolder' hidden=true><%= rateMapId %></div>
 <div id='targetNumHolder' hidden=true><%= targetNum %></div>
+<a href="/map" class="btn btn-default" id="back-button">
+	<span class="glyphicon glyphicon-arrow-left"></span>
+	Back to Site 
+</a>
 </div>
 
 <script>

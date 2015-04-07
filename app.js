@@ -4,7 +4,6 @@ var path = require('path');
 var app = express();
 var engine = require('ejs-locals');
 var bodyParser = require('body-parser');
-var session = require('express-session');
 var mapRoute, extrasRoute;
 
 app.set('port', process.env.PORT || 8080);
