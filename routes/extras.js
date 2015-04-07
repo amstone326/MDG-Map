@@ -6,14 +6,14 @@ exports.init = function(callback) {
 	callback();
 };
 
-exports.info = function(req, res) {
-	res.render('background_info', {title:"Background on MDGs"});
-};
-
-exports.sources = function(req, res) {
-	res.render('sources', {title:"Sources"});
-};
-
 exports.report = function(req, res) {
 	res.render('report', {title:"Report"});
+};
+
+exports.mapExplanation = function(req, res) {
+	res.render('map_explanation', {title:"What is the MDG-Map Project?"});
+};
+
+exports.mdgExplanation = function(req, res) {
+	res.render('mdg_explanation', {title:"What are the MDGs?"});
 };

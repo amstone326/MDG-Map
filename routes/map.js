@@ -19,7 +19,3 @@ exports.status = function(req, res) {
 	var rateMapId = req.params.rateMapId;
 	res.render('status', {mapId:mapId, rateMapId:rateMapId, targetNum:targetNum, title:"Status Layer"});
 };
-
-exports.mapExplanation = function(req, res) {
-	res.render('map_explanation', {title:"How it Works"});
-};

@@ -15,11 +15,12 @@ app.use(bodyParser.json());
 app.use( express.static( path.join( __dirname, 'public' )));
 
 initRoutes('routes', function() {
-	app.get('/', mapRoute.mapExplanation);
-	app.get('/map', mapRoute.mapExplanation);
+	app.get('/', extrasRoute.mapExplanation);
+	app.get('/mapExplanation', extrasRoute.mapExplanation);
+	app.get('/report', extrasRoute.report);
+	app.get('/mdgExplanation', extrasRoute.mdgExplanation);
 	app.get('/rate/:targetNum/:mapId/:statusMapId', mapRoute.rate);
 	app.get('/status/:targetNum/:mapId/:rateMapId', mapRoute.status);
-	app.get('/info', extrasRoute.info);
 	http.createServer(app).listen(app.get('port'), function() {
 			 console.log( 'Open browser to http://localhost:' + app.get( 'port' ));
 	});
