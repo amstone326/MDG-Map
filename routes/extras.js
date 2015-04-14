@@ -7,12 +7,16 @@ exports.init = function(callback) {
 };
 
 exports.report = function(req, res) {
-	res.render('report', {title:"Report"});
+	res.render('report', {title:"Full Report"});
 };
 
 exports.mapExplanation = function(req, res) {
 	res.render('map_explanation', {title:"What is the MDG-Map Project?"});
 };
+
+exports.measuring = function(req, res) {
+	res.render('measuring', {title: "Measuring the MDGs"});
+}
 
 exports.mdgExplanation = function(req, res) {
 	res.render('mdg_explanation', {title:"What are the Millennium Development Goals?"});

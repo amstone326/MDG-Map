@@ -19,6 +19,7 @@ initRoutes('routes', function() {
 	app.get('/mapExplanation', extrasRoute.mapExplanation);
 	app.get('/report', extrasRoute.report);
 	app.get('/mdgExplanation', extrasRoute.mdgExplanation);
+	app.get('/measuring', extrasRoute.measuring);
 	app.get('/rate/:targetNum/:mapId/:statusMapId', mapRoute.rate);
 	app.get('/status/:targetNum/:mapId/:rateMapId', mapRoute.status);
 	http.createServer(app).listen(app.get('port'), function() {
