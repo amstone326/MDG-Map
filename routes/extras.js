@@ -15,5 +15,5 @@ exports.mapExplanation = function(req, res) {
 };
 
 exports.mdgExplanation = function(req, res) {
-	res.render('mdg_explanation', {title:"What are the MDGs?"});
+	res.render('mdg_explanation', {title:"What are the Millennium Development Goals?"});
 };
