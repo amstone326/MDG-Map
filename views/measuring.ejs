@@ -1,15 +1,136 @@
 <!-- Embed the layout.ejs file -->
 <% layout('base_layout') -%>
 
-<div>
-Each of the eight MDGs is broken down into one or more measurable targets. For each of the established 
-targets, the UN selected one or more "indicators"- a practical, numeric metric with which to measure and 
-report progress on that target. For every indicator, a country can be assigned a numerical value to 
-indicate its progress. All indicators are either represented 
-as a percentage (e.g. indicator 1.1, the percentage of the population living on less than $1.25 a day), 
-or as a count (e.g. indicator 5.1, the number of maternal deaths per 100,000 live births). 
-By collecting data on each of the indicators for a target at country and regional levels, 
-the UN can track and report on how much progress is being made each year, on each target. 
-In total, 21 targets and 60 associated indicators are being used to measure progress toward the MDGs. 
-The detailed break-down of targets for each goal, and indicators for each target, is as follows:
-</div></br>
+<html>
+<head>
+	<style>
+	
+	.title {
+		font-weight:bold;
+		font-size:large;
+		text-align:center;
+	}
+	
+	.box {
+	    background-color: rgba(160, 160, 160, .4);
+    	padding: 25px;
+    	border: 20px solid rgba(128, 128, 128, .4);
+    	margin: 25px;
+    }
+    
+    .goals {
+    	font-weight:bold;
+    }
+	
+	.indicators {
+		text-indent:25px;
+	}
+	
+	</style>
+</head>
+<body>
+	<div>
+	Each of the eight MDGs is broken down into one or more measurable targets. For each of the established 
+	targets, the UN selected one or more "indicators"- a practical, numeric metric with which to measure and 
+	report progress on that target. For every indicator, a country can be assigned a numerical value to 
+	indicate its progress. All indicators are either represented 
+	as a percentage (e.g. indicator 1.1, the percentage of the population living on less than $1.25 a day), 
+	or as a count (e.g. indicator 5.1, the number of maternal deaths per 100,000 live births). 
+	By collecting data on each of the indicators for a target at country and regional levels, 
+	the UN can track and report on how much progress is being made each year, on each target. 
+	In total, 21 targets and 60 associated indicators are being used to measure progress toward the MDGs.
+	The existence of these indicators, and the data that the UN Statistical Division has compiled on each 
+	of them over the last 25 years, was essential to the completion of this project. The measurement of
+	progress on each target represented by the map is based upon this data.
+	The detailed break-down of targets for each goal, and indicators for each target, is as follows:
+	</div>
+	<div class='box'>
+			<div class='title'>MDG Indicators</div></br>
+		<div class='goals'>Goal 1: Eradicate extreme poverty and hunger</div>
+			<div class='targets'>Target 1A: Halve, between 1990 and 2015, the proportion of people whose income is less than $1 a day</div>
+				<div class='indicators'>- Indicator 1.1: Proportion of population below $1.25 (PPP) per day</div>
+				<div class='indicators'>- Indicator 1.2: Poverty gap ratio</div>
+				<div class='indicators'>- Indicator 1.3: Share of poorest quintile in national consumption</div>
+			<div class='targets'>Target 1B: Achieve full and productive employment and decent work for all, including women and young people</div>
+				<div class='indicators'>- Indicator 1.4: Growth rate of GDP per person employed</div>
+				<div class='indicators'>- Indicator 1.5: Employment-to-population ratio</div>
+				<div class='indicators'>- Indicator 1.6: Proportion of employed people living below $1.25 (PPP) per day</div>
+				<div class='indicators'>- Indicator 1.7: Proportion of own-account and contributing family workers in total employment</div>
+			<div class='targets'>Target 1C: Halve, between 1990 and 2015, the proportion of people who suffer from hunger</div>
+				<div class='indicators'>- Indicator 1.8: Prevalence of underweight children under-five years of age</div>
+				<div class='indicators'>- Indicator 1.9: Proportion of population below minimum level of dietary energy consumption</div>
+		</br><div class='goals'>Goal 2: Achieve universal primary education</div>
+			<div class='targets'>Target 2A: Ensure that, by 2015, children everywhere, boys and girls alike, will be able to complete a full course of primary schooling</div>
+				<div class='indicators'>- Indicator 2.1: Net enrolment ratio in primary education</div>
+				<div class='indicators'>- Indicator 2.2: Proportion of pupils starting grade 1 who reach last grade of primary</div>
+				<div class='indicators'>- Indicator 2.3: Literacy rate of 15-24 year-olds, women and men</div>
+		</br><div class='goals'>Goal 3: Promote gender equality and empower women</div>
+			<div class='targets'>Target 3A: Eliminate gender disparity in primary and secondary education, preferably by 2005, and in all levels of education no later than 2015</div>
+				<div class='indicators'>- Indicator 3.1: Ratios of girls to boys in primary, secondary and tertiary education</div>
+				<div class='indicators'>- Indicator 3.2: Share of women in wage employment in the non-agricultural sector</div>
+				<div class='indicators'>- Indicator 3.3: Proportion of seats held by women in national parliament</div>
+		</br><div class='goals'>Goal 4: Reduce child mortality</div>
+			<div class='targets'>Target 4A: Reduce by two thirds, between 1990 and 2015, the under-five mortality rate</div>
+				<div class='indicators'>- Indicator 4.1: Under-five mortality rate</div>
+				<div class='indicators'>- Indicator 4.2: Infant mortality rate</div>
+				<div class='indicators'>- Indicator 4.3: Proportion of 1 year-old children immunised against measles</div>
+		</br><div class='goals'>Goal 5: Improve maternal health</div>
+			<div class='targets'>Target 5A: Reduce by three quarters, between 1990 and 2015, the maternal mortality ratio</div>
+				<div class='indicators'>- Indicator 5.1: Maternal mortality ratio</div>
+				<div class='indicators'>- Indicator 5.2: Proportion of births attended by skilled health personnel</div>
+			<div class='targets'>Target 5B: Achieve, by 2015, universal access to reproductive health</div>
+				<div class='indicators'>- Indicator 5.3: Contraceptive prevalence rate</div>
+				<div class='indicators'>- Indicator 5.4: Adolescent birth rate</div>
+				<div class='indicators'>- Indicator 5.5: Antenatal care coverage (at least one visit and at least four visits)</div>
+				<div class='indicators'>- Indicator 5.6: Unmet need for family planning</div>
+		</br><div class='goals'>Goal 6: Combat HIV/AIDS, malaria and other diseases</div>
+			<div class='targets'>Target 6A: Have halted by 2015 and begun to reverse the spread of HIV/AIDS</div>
+				<div class='indicators'>- Indicator 6.1: HIV prevalence among population aged 15-24 years</div>
+				<div class='indicators'>- Indicator 6.2: Condom use at last high-risk sex</div>
+				<div class='indicators'>- Indicator 6.3: Proportion of population aged 15-24 years with comprehensive correct knowledge of HIV/AIDS</div>
+				<div class='indicators'>- Indicator 6.4: Ratio of school attendance of orphans to school attendance of non-orphans aged 10-14 years</div>
+			<div class='targets'>Target 6B: Achieve, by 2010, universal access to treatment for HIV/AIDS for all those who need it</div>
+				<div class='indicators'>- Indicator 6.5: Proportion of population with advanced HIV infection with access to antiretroviral drugs</div>
+			<div class='targets'>Target 6C: Have halted by 2015 and begun to reverse the incidence of malaria and other major diseases</div>
+				<div class='indicators'>- Indicator 6.6: Incidence and death rates associated with malaria</div>
+				<div class='indicators'>- Indicator 6.7: Proportion of children under 5 sleeping under insecticide-treated bednets</div>
+				<div class='indicators'>- Indicator 6.8: Proportion of children under 5 with fever who are treated with appropriate anti-malarial drugs</div>
+				<div class='indicators'>- Indicator 6.9: Incidence, prevalence and death rates associated with tuberculosis</div>
+				<div class='indicators'>- Indicator 6.10: Proportion of tuberculosis cases detected and cured under directly observed treatment short course</div>
+		</br><div class='goals'>Goal 7: Ensure environmental sustainability</div>
+			<div class='targets'>Target 7A: Integrate the principles of sustainable development into country policies and programmes and 
+			reverse the loss of environmental resources</div>
+				<div class='indicators'>- Indicator 7.1: Proportion of land area covered by forest</div>
+				<div class='indicators'>- Indicator 7.2: CO2 emissions, total, per capita and per $1 GDP (PPP)</div>
+				<div class='indicators'>- Indicator 7.3: Consumption of ozone-depleting substances</div>
+				<div class='indicators'>- Indicator 7.4: Proportion of fish stocks within safe biological limits</div>
+				<div class='indicators'>- Indicator 7.5: Proportion of total water resources used </div>
+			<div class='targets'>Target 7B: Reduce biodiversity loss, achieving, by 2010, a significant reduction in the rate of loss</div>
+				<div class='indicators'>- Indicator 7.6: Proportion of terrestrial and marine areas protected</div>
+				<div class='indicators'>- Indicator 7.7: Proportion of species threatened with extinction</div>
+			<div class='targets'>Target 7C: Halve, by 2015, the proportion of the population without sustainable access to 
+			safe drinking water and basic sanitation</div>
+				<div class='indicators'>- Indicator 7.8: Proportion of population using an improved drinking water source</div>
+				<div class='indicators'>- Indicator 7.9: Proportion of population using an improved sanitation facility</div>
+			<div class='targets'>Target 7D: By 2020, to have achieved a significant improvement in the lives of at least 100 million slum dwellers</div>
+				<div class='indicators'>- Indicator 7.10: Proportion of urban population living in slums</div>
+		</br><div class='goals'>Goal 8: Develop a global partnership for development [NOTE: Indicators for MDG 8 are generic to the goal and not target-specific</div>
+				<div class='indicators'>- Indicator 8.1: Net ODA, total and to the least developed countries, as percentage of OECD/DAC donors' gross national income</div>
+				<div class='indicators'>- Indicator 8.2: Proportion of total bilateral, sector-allocable ODA of OECD/DAC donors to basic social services (basic education, primary health care, nutrition, safe water and sanitation)</div>
+				<div class='indicators'>- Indicator 8.3: Proportion of bilateral official development assistance of OECD/DAC donors that is untied</div>
+				<div class='indicators'>- Indicator 8.4: ODA received in landlocked developing countries as a proportion of their gross national incomes</div>
+				<div class='indicators'>- Indicator 8.5: ODA received in small island developing States as a proportion of their gross national incomes</div>
+				<div class='indicators'>- Indicator 8.6: Proportion of total developed country imports (by value and excluding arms) from developing countries and least developed countries, admitted free of duty</div>
+				<div class='indicators'>- Indicator 8.7: Average tariffs imposed by developed countries on agricultural products and textiles and clothing from developing countries</div>
+				<div class='indicators'>- Indicator 8.8: Agricultural support estimate for OECD countries as a percentage of their gross domestic product</div>
+				<div class='indicators'>- Indicator 8.9: Proportion of ODA provided to help build trade capacity</div>
+				<div class='indicators'>- Indicator 8.10: Total number of countries that have reached their HIPC decision points and number that have reached their HIPC completion points (cumulative)</div>
+				<div class='indicators'>- Indicator 8.11: Debt relief committed under HIPC and MDRI Initiatives</div>
+				<div class='indicators'>- Indicator 8.12: Debt service as a percentage of exports of goods and services</div>
+	</div>
+	
+</body>
+</html>
+
+
+
