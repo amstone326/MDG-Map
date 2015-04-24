@@ -11,7 +11,7 @@ exports.report = function(req, res) {
 };
 
 exports.mapExplanation = function(req, res) {
-	res.render('map_explanation', {title:"What is the MDG-Map Project?"});
+    res.render('map_explanation', {title:"What is MDG-Map?"});
 };
 
 exports.measuring = function(req, res) {
