@@ -48,6 +48,24 @@
 		  border-width:5px;
 		  border-color:black;
   		}
+  		
+  		#show-explanation {
+  			position:absolute;
+		  	bottom:85px;left:12px;
+		  	border-radius:7px;
+		  	z-index:1;
+		}
+  		
+  		.box {
+		    background-color: rgba(160, 160, 160, 1);
+	    	padding: 10px;
+	    	border: 15px solid rgba(128, 128, 128, 1);
+	    	text-align:center;
+	    	position:absolute;
+		  	bottom:30px;left:320px;right:320px;
+		  	border-radius:7px;
+	    	z-index:1;
+   	 	}
 		
 		
 	</style>
@@ -88,13 +106,33 @@
 	<input type="radio" name="layer" value="rate"> Rate of Progress Layer<br>
 	<input type="radio" name="layer" value="status" checked="checked"> Status on Goal Layer
 </form>
+<div class='box' id='map_explanation' hidden='true'>
+	<div id='explanation_text' style='color:black; font-size:13px'>
+		<h3>Reading the Map</h3>
+		For each MDG target, there are two different layer types, representing two ways of measuring progress
+		on the target: </br></br>
+		1. <u>“Rate of Progress"</u> -- This layer should be viewed as a comparison 
+		of how quickly different countries have made progress over the period of MDG implementation. The map legend for 
+		each layer of this type provides what the average rate of progress was over all developing countries. The diverging 
+		color scheme then provides a visualization of whether each country falls above or below that average, 
+		and to what extent. This metric is important for classifying how productive individual countries have been 
+		on a certain target over the period of MDG implementation.</br></br>
+		2. <u>“Status on Goal"</u> -- This layer should be viewed as 
+		a comparison of the absolute point of progress at which each country stands for a given target. The 
+		monochrome color gradient provides a visualization of relative percent completions of the given 
+		target amongst different countries. This metric is important for 
+		straightforward classification of which countries are doing better or worse as they stand currently.
+		</br></br><button class="btn btn-default" id='close-box'>Close</button>
+	</div>
+</div>
 <div id='mapIdHolder' hidden=true><%= mapId %></div>
 <div id='rateMapIdHolder' hidden=true><%= rateMapId %></div>
 <div id='targetNumHolder' hidden=true><%= targetNum %></div>
-<a href="/" class="btn btn-default" id="back-button">
+<a href="/" class="btn btn-default" id="back-button" style="color:black">
 	<span class="glyphicon glyphicon-arrow-left"></span>
 	Back to Site 
 </a>
+<button class="btn btn-default" id="show-explanation">How to Read the Map</button>
 </div>
 
 <script>
@@ -111,6 +149,15 @@ $(function(){
 		window.location.replace('/rate/' + targetNum + "/" + rateMapId + "/" + mapId);
 	});
 });
+
+$('#show-explanation').click(function() {
+	$('#map_explanation').show();
+});
+
+$('#close-box').click(function() {
+	$('#map_explanation').hide();
+});
+
 
 
 </script>
